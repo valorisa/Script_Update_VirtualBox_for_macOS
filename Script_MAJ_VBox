@@ -7,7 +7,7 @@ echo " What recent version of VirtualBox do you want to install as an update ? "
 echo " What is the recent VirtualBox build number you want to install as an update ? "; read nb ; b="$nb"
 
 cd /Users/$(logname)/Downloads
-sudo rm -iRv ./VirtualBox\ 6.*
+sudo rm -iRv ./VirtualBox\ 6.* #Optional line, only if you have already a 'VirtualBox' directory in 'Downloads'
 mkdir VirtualBox\ "$nv"\ Build\ "$nb"
 cd ./VirtualBox\ "$nv"\ Build\ "$nb"/
 
