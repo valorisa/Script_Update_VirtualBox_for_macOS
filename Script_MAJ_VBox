@@ -2,9 +2,9 @@
 
 open -a virtualbox ; sleep 10 && sudo kill `ps -ef | grep VirtualBox | awk '{print $2}'`
 
-echo " Quelle est la version récente de VirtualBox que vous souhaitez installer comme mise à jour ? "; read nv ; v="$nv"
+echo " What recent version of VirtualBox do you want to install as an update ? "; read nv ; v="$nv"
 
-echo " Quel est le n° de la build récente de VirtualBox que vous souhaitez installer comme mise à jour ? "; read nb ; b="$nb"
+echo " What is the recent VirtualBox build number you want to install as an update ? "; read nb ; b="$nb"
 
 cd /Users/$(logname)/Downloads
 sudo rm -iRv ./VirtualBox\ 6.*
