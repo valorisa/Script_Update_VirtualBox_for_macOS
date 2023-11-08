@@ -1,6 +1,6 @@
 ![neutron](https://github.com/valorisa/Script_Update_VirtualBox_for_macOS/assets/13067566/b540c778-e9f6-487e-b53c-773f09675fb8)
 
-Script to update VirtualBox version for macOS from terminal (CLI)
+# Script to update VirtualBox version for macOS from terminal (CLI)
 
 #!/bin/bash
 
