@@ -1,5 +1,3 @@
-```shell
-
 #!/bin/bash
 
 open -a virtualbox ; sleep 10 && sudo kill `ps -ef | grep VirtualBox | awk '{print $2}'`
@@ -29,5 +27,3 @@ cd
 open -a virtualbox ; vboxmanage --version
 
 sudo vboxmanage extpack install /Users/$(logname)/Downloads/VirtualBox\ "$v"\ Build\ "$b"/Oracle_VM_VirtualBox_Extension_Pack-"$v"-"$b".vbox-extpack --replace
-
-```
