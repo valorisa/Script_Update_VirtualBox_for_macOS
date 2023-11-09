@@ -12,7 +12,7 @@ echo " What is the recent VirtualBox build number you want to install as an upda
 
 cd /Users/$(logname)/Downloads
 
-sudo rm -iRv ./VirtualBox\ 7.* #Optional line, only if you have already a 'VirtualBox' directory in 'Downloads'
+sudo rm -iRv ./VirtualBox\ 6.* & sudo rm -iRv ./VirtualBox\ 7.* #Optional line, only if you have already a 'VirtualBox' directory in 'Downloads'
 
 mkdir VirtualBox\ "$nv"\ Build\ "$nb"
 
