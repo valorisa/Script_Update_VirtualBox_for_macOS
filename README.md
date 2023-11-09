@@ -29,4 +29,5 @@ diskutil unmount "${MOUNTDIR}"
 cd
 
 open -a virtualbox ; vboxmanage --version
+
 sudo vboxmanage extpack install /Users/$(logname)/Downloads/VirtualBox\ "$v"\ Build\ "$b"/Oracle_VM_VirtualBox_Extension_Pack-"$v"-"$b".vbox-extpack --replace
