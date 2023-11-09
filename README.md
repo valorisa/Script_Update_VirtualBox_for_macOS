@@ -1,7 +1,7 @@
 ![367247962_310921638381166_5778974277649585141_n](https://github.com/valorisa/Script_Update_VirtualBox_for_macOS/assets/13067566/c8dd0322-6dba-45e2-b73e-8fd58881159e)
 
 # Script to update VirtualBox version for macOS from terminal (CLI)
-
+```console
 #!/bin/bash
 
 open -a virtualbox ; sleep 10 && sudo kill `ps -ef | grep VirtualBox | awk '{print $2}'`
@@ -31,3 +31,4 @@ cd
 open -a virtualbox ; vboxmanage --version
 
 sudo vboxmanage extpack install /Users/$(logname)/Downloads/VirtualBox\ "$v"\ Build\ "$b"/Oracle_VM_VirtualBox_Extension_Pack-"$v"-"$b".vbox-extpack --replace
+```
