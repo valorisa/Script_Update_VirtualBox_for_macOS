@@ -11,8 +11,11 @@ echo " What recent version of VirtualBox do you want to install as an update ? "
 echo " What is the recent VirtualBox build number you want to install as an update ? "; read nb ; b="$nb"
 
 cd /Users/$(logname)/Downloads
+
 sudo rm -iRv ./VirtualBox\ 7.* #Optional line, only if you have already a 'VirtualBox' directory in 'Downloads'
+
 mkdir VirtualBox\ "$nv"\ Build\ "$nb"
+
 cd ./VirtualBox\ "$nv"\ Build\ "$nb"/
 
 wget https://download.virtualbox.org/virtualbox/"$v"/VirtualBox-"$v"-"$b"-OSX.dmg https://download.virtualbox.org/virtualbox/"$v"/VBoxGuestAdditions_"$v".iso https://download.virtualbox.org/virtualbox/"$v"/Oracle_VM_VirtualBox_Extension_Pack-"$v"-"$b".vbox-extpack
