@@ -1,5 +1,7 @@
 ![367247962_310921638381166_5778974277649585141_n](https://github.com/valorisa/Script_Update_VirtualBox_for_macOS/assets/13067566/c8dd0322-6dba-45e2-b73e-8fd58881159e)
 
+It's a short shell script for macOS that you can rename like you want. Don't forget to give to the file the execution rights and a name which finishes with .sh.
+
 # Script to update VirtualBox 7.* version for macOS from terminal (CLI)
 ```shell
 #!/bin/bash
