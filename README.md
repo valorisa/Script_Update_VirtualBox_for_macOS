@@ -2,7 +2,7 @@
 
 It's a short shell script for macOS that you can rename like you want. Don't forget to give to the file the execution rights and a name which finishes with .sh.
 
-# Script to update VirtualBox 7.* version for macOS from terminal (CLI)
+#Script to update VirtualBox 7.* version for macOS from terminal (CLI)
 ```shell
 #!/bin/bash
 
