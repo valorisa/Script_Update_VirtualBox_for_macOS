@@ -63,19 +63,19 @@ git clone https://github.com/valorisa/Script_Update_VirtualBox_for_macOS.git
 cd Script_Update_VirtualBox_for_macOS
 
 # 2. Rendre le script exécutable
-chmod +x Script_MAJ_VBox
+chmod +x Script_MAJ_VBox_v2.sh
 
 # 3. (Optionnel mais recommandé) Valider la syntaxe
 brew install shellcheck
-shellcheck Script_MAJ_VBox  # Doit retourner 0 warning
+shellcheck Script_MAJ_VBox_v2.sh  # Doit retourner 0 warning
 
 # 4. Lancer le script
-./Script_MAJ_VBox
+./Script_MAJ_VBox_v2.sh
 ```
 
 💡 *Astuce* : Ajoutez-le à votre `PATH` pour un accès global :
 ```bash
-ln -s "$PWD/Script_MAJ_VBox" /usr/local/bin/vbox-update
+ln -s "$PWD/Script_MAJ_VBox_v2.sh" /usr/local/bin/vbox-update
 # Puis utilisez simplement : vbox-update
 ```
 
@@ -85,7 +85,7 @@ ln -s "$PWD/Script_MAJ_VBox" /usr/local/bin/vbox-update
 
 ### 🟢 Mode Interactif (par défaut)
 ```bash
-$ ./Script_MAJ_VBox
+$ ./Script_MAJ_VBox_v2.sh
 ╔══════════════════════════════════════════════════════════════╗
 ║  🔄 VirtualBox Updater for macOS — Version 2.0               ║
 ║  Automatisation sécurisée de l'installation VirtualBox 7.x   ║
@@ -105,19 +105,19 @@ $ ./Script_MAJ_VBox
 ### 🔵 Mode CLI Non-Interactif
 ```bash
 # Installation ciblée
-./Script_MAJ_VBox --version 7.0.12 --build 150234
+./Script_MAJ_VBox_v2.sh --version 7.0.12 --build 150234
 
 # Détection automatique de la dernière version
-./Script_MAJ_VBox --auto-version
+./Script_MAJ_VBox_v2.sh --auto-version
 
 # Simulation sans exécution (idéal pour tester/CI)
-./Script_MAJ_VBox --version 7.0.12 --build 150234 --dry-run --verbose
+./Script_MAJ_VBox_v2.sh --version 7.0.12 --build 150234 --dry-run --verbose
 
 # Installation silencieuse + nettoyage post-install
-./Script_MAJ_VBox --version 7.0.12 --build 150234 --skip-extpack --cleanup
+./Script_MAJ_VBox_v2.sh --version 7.0.12 --build 150234 --skip-extpack --cleanup
 
 # Dossier de téléchargement personnalisé
-./Script_MAJ_VBox --version 7.0.12 --build 150234 --download-dir "$HOME/Installers"
+./Script_MAJ_VBox_v2.sh --version 7.0.12 --build 150234 --download-dir "$HOME/Installers"
 ```
 
 ### 📊 Options Disponibles
@@ -156,13 +156,13 @@ $ ./Script_MAJ_VBox
 ### 🔍 Audit avant exécution (recommandé)
 ```bash
 # Lire le script
-less Script_MAJ_VBox
+less Script_MAJ_VBox_v2.sh
 
 # Vérifier la syntaxe
-bash -n Script_MAJ_VBox && echo "✅ Syntaxe valide"
+bash -n Script_MAJ_VBox_v2.sh && echo "✅ Syntaxe valide"
 
 # Analyser les bonnes pratiques
-shellcheck Script_MAJ_VBox
+shellcheck Script_MAJ_VBox_v2.sh
 ```
 
 ---
@@ -176,7 +176,7 @@ Le script enregistre automatiquement les actions dans :
 
 ### Activer le mode verbeux
 ```bash
-./Script_MAJ_VBox --version 7.0.12 --build 150234 --verbose
+./Script_MAJ_VBox_v2.sh --version 7.0.12 --build 150234 --verbose
 ```
 
 ### Consulter les logs en temps réel
@@ -228,10 +228,10 @@ brew install --cask virtualbox
 ### 📞 Obtenir de l'aide
 ```bash
 # Afficher l'aide complète
-./Script_MAJ_VBox --help
+./Script_MAJ_VBox_v2.sh --help
 
 # Mode debug maximal
-./Script_MAJ_VBox --version 7.0.12 --build 150234 --verbose --dry-run 2>&1 | tee debug.log
+./Script_MAJ_VBox_v2.sh --version 7.0.12 --build 150234 --verbose --dry-run 2>&1 | tee debug.log
 ```
 
 ---
@@ -290,7 +290,7 @@ Les contributions sont les bienvenues ! 🙌
 
 ### 🧪 Tests Requis avant PR
 - [ ] Fonctionne sur macOS 12+ (Intel & Apple Silicon)
-- [ ] `shellcheck Script_MAJ_VBox` retourne `0` erreur/warning
+- [ ] `shellcheck Script_MAJ_VBox_v2.sh` retourne `0` erreur/warning
 - [ ] Le mode `--dry-run` affiche exactement les commandes attendues
 - [ ] Gestion d'erreur testée (réseau coupé, espace disque insuffisant, VirtualBox ouvert)
 - [ ] Les logs sont correctement écrits dans `~/Library/Logs/vbox-update.log`
