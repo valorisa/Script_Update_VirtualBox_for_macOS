@@ -75,7 +75,7 @@ debug()   { log "DEBUG" "$*"; }
 print_banner() {
     cat << 'EOF'
 ╔══════════════════════════════════════════════════════════════╗
-║  🔄 VirtualBox Updater for macOS — Version 2.0                ║
+║  🔄 VirtualBox Updater for macOS — Version 2.0               ║
 ║  Automatisation sécurisée de l'installation VirtualBox 7.x   ║
 ╚══════════════════════════════════════════════════════════════╝
 EOF
