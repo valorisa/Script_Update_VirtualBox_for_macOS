@@ -1,6 +1,6 @@
- name: Lint Markdown
+name: Lint Markdown
 
-  on:
+on:
     push:
       branches: [ "main" ]
       paths:
