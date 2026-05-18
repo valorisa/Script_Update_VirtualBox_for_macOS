@@ -170,7 +170,7 @@ shellcheck Script_MAJ_VBox_v2.sh
 ## 📝 Journalisation & Debug
 
 Le script enregistre automatiquement les actions dans :
-```
+```text
 ~/Library/Logs/vbox-update.log
 ```
 
@@ -189,7 +189,7 @@ log show --predicate 'process == "installer"' --last 15m
 ```
 
 ### Exemple de sortie log
-```
+```text
 [2026-04-15 18:45:12] [INFO] Starting VirtualBox update process
 [2026-04-15 18:45:13] [INFO] Architecture detected: arm64
 [2026-04-15 18:45:14] [SUCCESS] Prerequisites verified
@@ -239,7 +239,7 @@ brew install --cask virtualbox
 ## 📌 Changelog
 
 ### v2.0.0 (2026) — Réécriture complète production-ready
-```
+```text
 ✨ NOUVEAUTÉS :
 • Interface CLI complète : --version, --build, --auto-version, --dry-run, --verbose...
 • Détection automatique d'architecture avec avertissements Apple Silicon
@@ -267,7 +267,7 @@ brew install --cask virtualbox
 ```
 
 ### v1.x (Legacy)
-```
+```text
 • Script interactif basique
 • Téléchargement via wget
 • Aucune validation d'entrées
@@ -309,7 +309,7 @@ Les contributions sont les bienvenues ! 🙌
 Ce projet est distribué sous licence **MIT**.  
 Voir le fichier [`LICENSE`](LICENSE) pour plus de détails.
 
-```
+```text
 MIT License
 
 Copyright (c) 2026 valorisa
