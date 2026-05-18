@@ -6,3 +6,4 @@ config:
   MD031: false  # blank lines around fences
   MD032: false  # blank lines around lists
   MD051: false  # link fragments (emoji slugs inconsistent across tools)
+  MD060: false  # table column style (compact pipes are fine)
